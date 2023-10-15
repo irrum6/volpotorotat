@@ -1,6 +1,6 @@
 pub mod tools {
     use std::f64::consts::PI;
-    // cylinders -cylinder count
+    // cylinders - cylinder count
     // dimensions are given in millimeer
     // volume is calculated in cubic centimeter
     pub fn volume(bore: f64, stroke: f64, cylinders: u8) -> f64 {
