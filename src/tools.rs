@@ -8,19 +8,19 @@ pub mod tools {
     }
 
     pub fn power_watts(torque: f64, rpm: u16) -> f64 {
-        return (torque * PI * rpm as f64) / 60.0;
+        return (torque *2.0 * PI * rpm as f64) / 60.0;
     }
 
     pub fn power_hp(torque: f64, rpm: u16) -> f64 {
-        return (torque * PI * rpm as f64) / (60.0 * 745.69987);
+        return (torque *2.0* PI * rpm as f64) / (60.0 * 745.69987);
     }
     pub fn power_ps(torque: f64, rpm: u16) -> f64 {
-        return (torque * PI * rpm as f64) / (60.0 * 735.49875);
+        return (torque *2.0* PI * rpm as f64) / (60.0 * 735.49875);
     }
 
     //power in watts
     //out in newton-meters
     pub fn torque_nm(power: f64, rpm: u16) -> f64 {
-        return (power * 60.0) / (PI * rpm as f64);
+        return (power * 60.0) / (PI *2.0* rpm as f64);
     }
 }
