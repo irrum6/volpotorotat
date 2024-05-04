@@ -5,7 +5,7 @@ fn main() {
     use std::env;
     let args: Vec<String> = env::args().collect();
 
-    const VERSION: &str = "0.2.3";
+    const VERSION: &str = "0.2.4";
 
     if args.len() < 2 {
         return;
