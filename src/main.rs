@@ -77,9 +77,15 @@ fn main() {
     use std::env;
     let args: Vec<String> = env::args().collect();
 
-    const VERSION: &str = "0.2.5";
+    const VERSION: &str = "0.2.6";
 
     if args.len() < 2 {
+        let f: u64 = 3048;
+        let lb: u64 = 45359237;
+        let g = 980665;
+
+        println!("{}",lb *g);
+        println!("{}", f * lb *g);
         return;
     }
 
