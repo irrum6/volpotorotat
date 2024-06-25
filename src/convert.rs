@@ -36,7 +36,28 @@ pub mod convert {
     pub fn mph_to_kmh(miles_per_hour: u32) -> f64 {
         return miles_per_hour as f64 * MILE;
     }
+    /**
+     * 
+     */
     pub fn kmh_to_mph(kilometers_hour: u32) -> f64 {
         return kilometers_hour as f64 / MILE;
+    }
+    /**
+     * from miles per gallon to litres per 100 kilometer
+     * more than 256 miles per gallon is unlikely
+     */
+    pub fn mpg_to_litres(mpg: u8) -> f32 {
+        //US gallon 3.785411784 gal
+        //Mile 1.609344
+        //miles m
+        //100 / (m * M /gal) =
+        //100 gal /(m*m)
+        //define
+        //100 gal/M
+        // 100G/M * 1/m
+        // 100G/M / m
+        // 3785411784 / 1609344 = 2352.1458333333
+        // mpg_to_lp100km = m=> 235.21458333333 / m;
+        return 235.21458333333 / (mpg as f32);
     }
 }

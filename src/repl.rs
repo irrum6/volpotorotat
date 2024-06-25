@@ -63,6 +63,12 @@ pub mod repl {
                 continue;
             }
 
+            if args[0] == "tolitres" {
+                vptr::print_litres(&args);
+                line.truncate(0);
+                continue;
+            }
+
             println!("unknown command");
             line.truncate(0);
             continue;

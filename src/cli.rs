@@ -3,7 +3,6 @@ pub mod cli {
     use crate::VERSION;
 
     pub fn run_cli(args: &Vec<String>) {
-
         // let cli_args;
         if args[1] == "--version" || args[1] == "-V" {
             println!("Volpotorotat v{}", VERSION);
@@ -27,6 +26,9 @@ pub mod cli {
 
         if args[0] == "pbhp" || args[1] == "HP" {
             vptr::print_pbhp(&args);
+        }
+        if args[0] == "tolitres" {
+            vptr::print_litres(&args);
         }
     }
 }

@@ -31,4 +31,5 @@ pub mod tools {
     pub fn torque_nm(power: f64, rpm: u16) -> f64 {
         return (power * 60.0) / (PI * 2.0 * rpm as f64);
     }
+    
 }

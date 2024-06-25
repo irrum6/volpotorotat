@@ -82,4 +82,16 @@ pub mod vptr {
         );
         return;
     }
+    pub fn print_litres(v: &Vec<String>) {
+        if v.len() < 2 {
+            println!("pass enough parameters to calculate");
+            return;
+        }
+        let mpg: u8 = v[1].trim().parse().expect("small enought number <256");
+        let litres = convert::convert::mpg_to_litres(mpg);
+        println!(
+            "{} miles per gallon  equals {:.3} litres per 100 kilometer",
+            mpg, litres
+        );
+    }
 }
