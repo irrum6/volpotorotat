@@ -69,6 +69,12 @@ pub mod repl {
                 continue;
             }
 
+            if args[0] == "toefsf" {
+                vptr::prinf_efsf(&args);
+                line.truncate(0);
+                continue;
+            }
+
             println!("unknown command");
             line.truncate(0);
             continue;

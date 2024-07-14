@@ -94,4 +94,16 @@ pub mod vptr {
             mpg, litres
         );
     }
+    pub fn prinf_efsf(v: &Vec<String>) {
+        if v.len() < 2 {
+            println!("pass enough parameters to calculate");
+            return;
+        }
+        let pascals: f64 = v[1].trim().parse().expect("small enought number <256");
+        let efsf = convert::convert::to_efsf_reduced(pascals);
+        println!(
+            "{} pascals equal to  {:.5} elefant forces per square foot",
+            pascals, efsf
+        );
+    }
 }

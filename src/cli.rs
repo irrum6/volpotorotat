@@ -30,5 +30,8 @@ pub mod cli {
         if args[0] == "tolitres" {
             vptr::print_litres(&args);
         }
+        if args[0] == "toefsf" {
+            vptr::prinf_efsf(&args);            
+        }
     }
 }

@@ -37,7 +37,7 @@ pub mod convert {
         return miles_per_hour as f64 * MILE;
     }
     /**
-     * 
+     *
      */
     pub fn kmh_to_mph(kilometers_hour: u32) -> f64 {
         return kilometers_hour as f64 / MILE;
@@ -59,5 +59,37 @@ pub mod convert {
         // 3785411784 / 1609344 = 2352.1458333333
         // mpg_to_lp100km = m=> 235.21458333333 / m;
         return 235.21458333333 / (mpg as f32);
+    }
+
+    /**
+     * to elefant force per square foot efsf
+     * takes pascals noverts to efsf
+     * assuming standart male african bush elefant
+     * with nomminal mass of 6000kg
+     * the g is equal to 9.80665 m/s^2
+     * 1 foot is 0.3048 meters
+     * 1 pascal is 1 newton per square meter
+     * put all that we get
+     * weight 58839.90
+     * 1 sq.ft = 0.09290304
+     * and result is 633347.4125281584 pascals
+     * 633347.412528158389650 to be exact
+     */
+    pub fn to_efsf(pascals: f64) -> f64 {
+        return pascals / 633347.4125281584;
+    }
+    /*
+     * and this converts from efsf
+     */
+    pub fn from_efsf(efsf: f64) -> f64 {
+        return efsf * 633347.4125281584;
+    }
+    //reduced accuracy
+    pub fn to_efsf_reduced(pascals: f64) -> f64 {
+        return pascals / 633347.4;
+    }
+    //reduced accuracy
+    pub fn from_efsf_reduced(efsf: f64) -> f64 {
+        return efsf * 633347.4;
     }
 }
