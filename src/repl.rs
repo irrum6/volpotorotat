@@ -75,6 +75,12 @@ pub mod repl {
                 continue;
             }
 
+            if args[0] == "tobb" {
+                vptr::prinf_bluebberies(&args);
+                line.truncate(0);
+                continue;
+            }
+
             println!("unknown command");
             line.truncate(0);
             continue;

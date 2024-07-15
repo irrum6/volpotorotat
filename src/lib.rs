@@ -99,11 +99,21 @@ pub mod vptr {
             println!("pass enough parameters to calculate");
             return;
         }
-        let pascals: f64 = v[1].trim().parse().expect("small enought number <256");
+        let pascals: f64 = v[1].trim().parse().expect("number float64");
         let efsf = convert::convert::to_efsf_reduced(pascals);
         println!(
             "{} pascals equal to  {:.5} elefant forces per square foot",
             pascals, efsf
         );
+    }
+
+    pub fn prinf_bluebberies(v: &Vec<String>) {
+        if v.len() < 2 {
+            println!("pass enough parameters to calculate");
+            return;
+        }
+        let cc: f64 = v[1].trim().parse().expect("number float64");
+        let bb = convert::convert::to_blueberries(cc);
+        println!("{} cubic centimetres equal to  {:.6} blueberries", cc, bb);
     }
 }

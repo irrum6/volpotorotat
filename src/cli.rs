@@ -31,7 +31,10 @@ pub mod cli {
             vptr::print_litres(&args);
         }
         if args[0] == "toefsf" {
-            vptr::prinf_efsf(&args);            
+            vptr::prinf_efsf(&args);
+        }
+        if args[0] == "tobb" {
+            vptr::prinf_bluebberies(&args);
         }
     }
 }

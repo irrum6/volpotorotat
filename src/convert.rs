@@ -92,4 +92,11 @@ pub mod convert {
     pub fn from_efsf_reduced(efsf: f64) -> f64 {
         return efsf * 633347.4;
     }
+    /**
+     * assuming ideal sphere blueberries with a diameter of 16mm
+     * volume is 2.14466
+     */
+    pub fn to_blueberries(cc: f64) -> f64 {
+        return cc / 2.1446606;
+    }
 }
