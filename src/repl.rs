@@ -22,7 +22,7 @@ pub mod repl {
             }
 
             if "version" == basic_arg || "-V" == basic_arg {
-                println!("Volpotorotat v{}", VERSION);
+                println!("Volpwtorq v{}", VERSION);
                 line.truncate(0);
                 continue;
             }

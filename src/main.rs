@@ -1,7 +1,7 @@
 // use volpotorotat::vptr::convert::convert;
 // use volpotorotat::vptr::tools::tools;
-use volpotorotat::vptr;
-use volpotorotat::vptr::VERSION;
+use volpwtorq::vptr;
+use volpwtorq::vptr::VERSION;
 
 mod cli;
 mod repl;

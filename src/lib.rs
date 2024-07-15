@@ -1,7 +1,7 @@
 pub mod convert;
 pub mod tools;
 pub mod vptr {
-    pub static VERSION: &str = "0.3.2";
+    pub static VERSION: &str = "0.3.6";
     pub use super::convert;
     pub use super::tools;
 

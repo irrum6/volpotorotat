@@ -4,8 +4,8 @@ pub mod cli {
 
     pub fn run_cli(args: &Vec<String>) {
         // let cli_args;
-        if args[1] == "--version" || args[1] == "-V" {
-            println!("Volpotorotat v{}", VERSION);
+        if args[0] == "--version" || args[0] == "-V" {
+            println!("Volpwtorq v{}", VERSION);
             return;
         }
         if args[0] == "vol" {
